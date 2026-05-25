@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultura Familiar Sustentável</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4fff4;
+      color: #2d4d2d;
+    }
+
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1b5e20;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Agricultura Familiar Sustentável</h1>
+    <p>Produção responsável para um futuro melhor 🌱</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <div class="card">
+      <h2>O que é?</h2>
+      <p>
+        A agricultura familiar sustentável utiliza práticas agrícolas
+        que respeitam o meio ambiente, promovem a economia local
+        e garantem alimentos saudáveis para a população.
+      </p>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <div class="card">
+      <h2>Benefícios</h2>
+      <ul>
+        <li>Preservação do solo e da água</li>
+        <li>Redução do uso de agrotóxicos</li>
+        <li>Fortalecimento da economia local</li>
+        <li>Produção de alimentos mais saudáveis</li>
+      </ul>
+
+      <button onclick="mostrarMensagem()">
+        Saiba Mais
+      </button>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="card">
+      <h2>Contato</h2>
+      <p>Email: agricultura@sustentavel.com</p>
+      <p>Telefone: (41) 99999-9999</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Agricultura Familiar Sustentável</p>
+  </footer>
+
+  <script>
+    function mostrarMensagem() {
+      alert("A agricultura sustentável ajuda a proteger o meio ambiente e melhorar a qualidade de vida!");
+    }
+  </script>
+
+</body>
+</html>
