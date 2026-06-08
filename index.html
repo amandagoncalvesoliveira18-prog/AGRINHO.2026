@@ -19,64 +19,102 @@
       margin: 0;
       padding: 0;
       color: var(--marrom);
+      line-height: 1.6;
     }
 
     header {
       background-color: var(--verde-musgo);
       color: var(--branco-amarelado);
       text-align: center;
-      padding: 30px 10px;
+      padding: 40px 10px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 3em;
     }
 
     main {
-      padding: 20px;
+      padding: 30px;
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       background-color: var(--amarelo-mostarda);
-      padding: 20px;
-      border-radius: 10px;
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     section h2 {
       color: var(--verde-musgo);
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    section p, section ul {
+      font-size: 1.3em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
     }
 
     /* Área interativa */
     .interactive {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
       margin-top: 20px;
+      gap: 30px;
     }
 
     .dancing {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2em;
+      font-size: 4em;
       cursor: pointer;
       animation: dance 1s infinite alternate;
+      user-select: none;
+      border-radius: 15px;
+      background-color: var(--branco-amarelado);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .dancing:hover {
+      transform: scale(1.2);
     }
 
     @keyframes dance {
       0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(15deg); }
-      100% { transform: translateY(0) rotate(-15deg); }
+      50% { transform: translateY(-30px) rotate(20deg); }
+      100% { transform: translateY(0) rotate(-20deg); }
     }
 
     footer {
       text-align: center;
       background-color: var(--verde-musgo);
       color: var(--branco-amarelado);
-      padding: 20px 10px;
+      padding: 30px 10px;
+      font-size: 1.2em;
+    }
+
+    /* Informações adicionais */
+    .extra-info {
+      font-size: 1.2em;
+      margin-top: 15px;
+      background-color: var(--branco-amarelado);
+      color: var(--marrom);
+      padding: 15px;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -84,21 +122,37 @@
 
   <header>
     <h1>Agricultura Familiar e seus Benefícios</h1>
+    <p>Alimentos frescos, comunidades fortes e sustentabilidade ambiental</p>
   </header>
 
   <main>
     <section>
       <h2>O que é Agricultura Familiar?</h2>
-      <p>A agricultura familiar é praticada por pequenos produtores que cultivam alimentos principalmente para consumo próprio e venda local. Ela é fundamental para a segurança alimentar, preservação ambiental e fortalecimento das comunidades.</p>
+      <p>A agricultura familiar é praticada por pequenos produtores que cultivam alimentos para consumo próprio e venda local. Ela valoriza práticas tradicionais e respeita o meio ambiente, fortalecendo a economia da comunidade.</p>
+      <div class="extra-info">
+        <strong>Exemplos de produtos:</strong> frutas, legumes, verduras, grãos, leite, ovos e produtos artesanais.
+      </div>
     </section>
 
     <section>
-      <h2>Benefícios</h2>
+      <h2>Benefícios da Agricultura Familiar</h2>
       <ul>
-        <li>Produção de alimentos frescos e saudáveis.</li>
-        <li>Preservação de tradições e culturas locais.</li>
-        <li>Fortalecimento da economia local.</li>
-        <li>Redução do impacto ambiental.</li>
+        <li>Fornece alimentos frescos e nutritivos diretamente à comunidade.</li>
+        <li>Preserva tradições e culturas locais.</li>
+        <li>Fortalece a economia local e cria empregos.</li>
+        <li>Contribui para a preservação do meio ambiente.</li>
+        <li>Reduz o desperdício de alimentos e a pegada de transporte.</li>
+        <li>Promove a educação sobre alimentação saudável e sustentável.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Curiosidades sobre Agricultura Familiar</h2>
+      <ul>
+        <li>Representa mais de 70% da produção de alimentos no Brasil.</li>
+        <li>Muitas vezes utiliza técnicas orgânicas e agroecológicas.</li>
+        <li>Favorece a biodiversidade, mantendo sementes e plantas nativas.</li>
+        <li>Comunidades rurais frequentemente organizam feiras e cooperativas para vender seus produtos.</li>
       </ul>
     </section>
 
@@ -115,6 +169,7 @@
 
   <footer>
     <p>&copy; 2026 Agricultura Familiar | Educação e Sustentabilidade</p>
+    <p>Produza, compartilhe e valorize alimentos locais!</p>
   </footer>
 
 </body>
