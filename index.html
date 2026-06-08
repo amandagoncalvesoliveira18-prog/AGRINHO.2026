@@ -3,128 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricultura Familiar Sustentável</title>
-
+  <title>Agricultura Familiar</title>
   <style>
+    /* Cores principais */
+    :root {
+      --verde-musgo: #556b2f;
+      --amarelo-mostarda: #d4a017;
+      --marrom: #8b4513;
+      --branco-amarelado: #fffacd;
+    }
+
     body {
       font-family: Arial, sans-serif;
+      background-color: var(--branco-amarelado);
       margin: 0;
-      background-color: #f4fff4;
-      color: #2d4d2d;
+      padding: 0;
+      color: var(--marrom);
     }
 
     header {
-      background: #2e7d32;
-      color: white;
-      padding: 30px;
+      background-color: var(--verde-musgo);
+      color: var(--branco-amarelado);
       text-align: center;
+      padding: 30px 10px;
     }
 
-    nav {
-      background: #1b5e20;
-      padding: 10px;
-      text-align: center;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    main {
+      padding: 20px;
     }
 
     section {
-      padding: 30px;
+      margin-bottom: 30px;
+      background-color: var(--amarelo-mostarda);
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    section h2 {
+      color: var(--verde-musgo);
+    }
+
+    /* Área interativa */
+    .interactive {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .dancing {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      cursor: pointer;
+      animation: dance 1s infinite alternate;
+    }
+
+    @keyframes dance {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(15deg); }
+      100% { transform: translateY(0) rotate(-15deg); }
     }
 
     footer {
-      background: #2e7d32;
-      color: white;
       text-align: center;
-      padding: 15px;
-    }
-
-    button {
-      background: #43a047;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background: #2e7d32;
+      background-color: var(--verde-musgo);
+      color: var(--branco-amarelado);
+      padding: 20px 10px;
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>Agricultura Familiar Sustentável</h1>
-    <p>Produção responsável para um futuro melhor 🌱</p>
+    <h1>Agricultura Familiar e seus Benefícios</h1>
   </header>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#beneficios">Benefícios</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <main>
+    <section>
+      <h2>O que é Agricultura Familiar?</h2>
+      <p>A agricultura familiar é praticada por pequenos produtores que cultivam alimentos principalmente para consumo próprio e venda local. Ela é fundamental para a segurança alimentar, preservação ambiental e fortalecimento das comunidades.</p>
+    </section>
 
-  <section id="sobre">
-    <div class="card">
-      <h2>O que é?</h2>
-      <p>
-        A agricultura familiar sustentável utiliza práticas agrícolas
-        que respeitam o meio ambiente, promovem a economia local
-        e garantem alimentos saudáveis para a população.
-      </p>
-    </div>
-  </section>
-
-  <section id="beneficios">
-    <div class="card">
+    <section>
       <h2>Benefícios</h2>
       <ul>
-        <li>Preservação do solo e da água</li>
-        <li>Redução do uso de agrotóxicos</li>
-        <li>Fortalecimento da economia local</li>
-        <li>Produção de alimentos mais saudáveis</li>
+        <li>Produção de alimentos frescos e saudáveis.</li>
+        <li>Preservação de tradições e culturas locais.</li>
+        <li>Fortalecimento da economia local.</li>
+        <li>Redução do impacto ambiental.</li>
       </ul>
+    </section>
 
-      <button onclick="mostrarMensagem()">
-        Saiba Mais
-      </button>
-    </div>
-  </section>
-
-  <section id="contato">
-    <div class="card">
-      <h2>Contato</h2>
-      <p>Email: agricultura@sustentavel.com</p>
-      <p>Telefone: (41) 99999-9999</p>
-    </div>
-  </section>
+    <section>
+      <h2>Interatividade: Dance com nossos personagens!</h2>
+      <div class="interactive">
+        <div class="dancing" onclick="alert('Milho feliz! 🌽')">🌽</div>
+        <div class="dancing" onclick="alert('Vaca feliz! 🐄')">🐄</div>
+        <div class="dancing" onclick="alert('Frutas felizes! 🍎🍌🍇')">🍎🍌🍇</div>
+      </div>
+      <p>Clique nos personagens para ver eles ficarem ainda mais animados!</p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 Agricultura Familiar Sustentável</p>
+    <p>&copy; 2026 Agricultura Familiar | Educação e Sustentabilidade</p>
   </footer>
-
-  <script>
-    function mostrarMensagem() {
-      alert("A agricultura sustentável ajuda a proteger o meio ambiente e melhorar a qualidade de vida!");
-    }
-  </script>
 
 </body>
 </html>
