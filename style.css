@@ -1,1 +1,92 @@
+/* estilos.css */
 
+/* Cores principais */
+:root {
+  --verde-musgo: #556b2f;
+  --amarelo-mostarda: #d4a017;
+  --marrom: #8b4513;
+  --branco-amarelado: #fffacd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--branco-amarelado);
+  margin: 0;
+  padding: 0;
+  color: var(--marrom);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--verde-musgo);
+  color: var(--branco-amarelado);
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  background-color: var(--amarelo-mostarda);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section h2 {
+  color: var(--verde-musgo);
+  font-size: 1.8em;
+}
+
+ul {
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+
+/* Área interativa */
+.interactive {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.dancing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+  cursor: pointer;
+  animation: dance 1s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.dancing:hover {
+  transform: scale(1.2);
+}
+
+.frutas {
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes dance {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(15deg); }
+  100% { transform: translateY(0) rotate(-15deg); }
+}
+
+footer {
+  text-align: center;
+  background-color: var(--verde-musgo);
+  color: var(--branco-amarelado);
+  padding: 20px 10px;
+}
