@@ -26,42 +26,33 @@
       background-color: var(--verde-musgo);
       color: var(--branco-amarelado);
       text-align: center;
-      padding: 40px 10px;
+      padding: 30px 10px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 3em;
+      font-size: 2.5em;
     }
 
     main {
-      padding: 30px;
+      padding: 20px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       background-color: var(--amarelo-mostarda);
-      padding: 25px 20px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      padding: 20px;
+      border-radius: 10px;
     }
 
     section h2 {
       color: var(--verde-musgo);
-      font-size: 2em;
-      margin-bottom: 15px;
-    }
-
-    section p, section ul {
-      font-size: 1.3em;
+      font-size: 1.8em;
     }
 
     ul {
       padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
+      font-size: 1.2em;
     }
 
     /* Área interativa */
@@ -70,22 +61,16 @@
       justify-content: space-around;
       flex-wrap: wrap;
       margin-top: 20px;
-      gap: 30px;
+      gap: 20px;
     }
 
     .dancing {
-      width: 150px;
-      height: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 4em;
+      font-size: 6em;
       cursor: pointer;
       animation: dance 1s infinite alternate;
-      user-select: none;
-      border-radius: 15px;
-      background-color: var(--branco-amarelado);
-      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
 
@@ -93,28 +78,22 @@
       transform: scale(1.2);
     }
 
+    .frutas {
+      display: flex;
+      gap: 10px;
+    }
+
     @keyframes dance {
       0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-30px) rotate(20deg); }
-      100% { transform: translateY(0) rotate(-20deg); }
+      50% { transform: translateY(-20px) rotate(15deg); }
+      100% { transform: translateY(0) rotate(-15deg); }
     }
 
     footer {
       text-align: center;
       background-color: var(--verde-musgo);
       color: var(--branco-amarelado);
-      padding: 30px 10px;
-      font-size: 1.2em;
-    }
-
-    /* Informações adicionais */
-    .extra-info {
-      font-size: 1.2em;
-      margin-top: 15px;
-      background-color: var(--branco-amarelado);
-      color: var(--marrom);
-      padding: 15px;
-      border-radius: 10px;
+      padding: 20px 10px;
     }
   </style>
 </head>
@@ -122,55 +101,63 @@
 
   <header>
     <h1>Agricultura Familiar e seus Benefícios</h1>
-    <p>Alimentos frescos, comunidades fortes e sustentabilidade ambiental</p>
   </header>
 
   <main>
     <section>
       <h2>O que é Agricultura Familiar?</h2>
-      <p>A agricultura familiar é praticada por pequenos produtores que cultivam alimentos para consumo próprio e venda local. Ela valoriza práticas tradicionais e respeita o meio ambiente, fortalecendo a economia da comunidade.</p>
-      <div class="extra-info">
-        <strong>Exemplos de produtos:</strong> frutas, legumes, verduras, grãos, leite, ovos e produtos artesanais.
+      <p>A agricultura familiar é praticada por pequenos produtores que cultivam alimentos principalmente para consumo próprio e venda local. Ela é fundamental para a segurança alimentar, preservação ambiental e fortalecimento das comunidades.</p>
+    </section>
+
+    <section>
+      <h2>Benefícios</h2>
+      <ul>
+        <li>Produção de alimentos frescos e saudáveis.</li>
+        <li>Preservação de tradições e culturas locais.</li>
+        <li>Fortalecimento da economia local.</li>
+        <li>Redução do impacto ambiental.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌾 Importância da Agricultura Familiar</h2>
+      <p>A agricultura familiar é uma das principais responsáveis pela produção de alimentos consumidos diariamente. Ela gera empregos, fortalece a economia local e ajuda a manter as famílias no campo.</p>
+      <p>Os agricultores familiares produzem milho, feijão, mandioca, frutas, verduras, leite, ovos e muitos outros alimentos.</p>
+      <p>Além de produzir alimentos, eles ajudam a preservar a natureza utilizando práticas mais sustentáveis e respeitando os recursos naturais.</p>
+    </section>
+
+    <section>
+      <h2>🍎 Alimentos Produzidos</h2>
+      <ul>
+        <li>🌽 Milho</li>
+        <li>🫘 Feijão</li>
+        <li>🥬 Verduras</li>
+        <li>🥕 Legumes</li>
+        <li>🍎 Frutas</li>
+        <li>🥛 Leite</li>
+        <li>🥚 Ovos</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌱 Interatividade: Dance com nossos personagens!</h2>
+      <div class="interactive">
+        <div class="dancing" onclick="alert('O milho é um dos alimentos mais cultivados pelos agricultores familiares! 🌽')">🌽</div>
+        <div class="dancing" onclick="alert('A vaca ajuda na produção de leite e derivados! 🐄')">🐄</div>
+        <div class="dancing frutas" onclick="alert('As frutas são importantes para uma alimentação saudável! 🍎🍌🍇🍓🍍')">
+          <span>🍎</span>
+          <span>🍌</span>
+          <span>🍇</span>
+          <span>🍓</span>
+          <span>🍍</span>
+        </div>
       </div>
-    </section>
-
-    <section>
-      <h2>Benefícios da Agricultura Familiar</h2>
-      <ul>
-        <li>Fornece alimentos frescos e nutritivos diretamente à comunidade.</li>
-        <li>Preserva tradições e culturas locais.</li>
-        <li>Fortalece a economia local e cria empregos.</li>
-        <li>Contribui para a preservação do meio ambiente.</li>
-        <li>Reduz o desperdício de alimentos e a pegada de transporte.</li>
-        <li>Promove a educação sobre alimentação saudável e sustentável.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Curiosidades sobre Agricultura Familiar</h2>
-      <ul>
-        <li>Representa mais de 70% da produção de alimentos no Brasil.</li>
-        <li>Muitas vezes utiliza técnicas orgânicas e agroecológicas.</li>
-        <li>Favorece a biodiversidade, mantendo sementes e plantas nativas.</li>
-        <li>Comunidades rurais frequentemente organizam feiras e cooperativas para vender seus produtos.</li>
-      </ul>
-    </section>
-
-    <section>
-     <div class="dancing" onclick="alert('Frutas felizes!')">
-  <span>🍎</span>
-  <span>🍌</span>
-  <span>🍇</span>
-  <span>🍓</span>
-  <span>🍍</span>
-</div>
-      <p>Clique nos personagens para ver eles ficarem ainda mais animados!</p>
+      <p>Clique nos personagens para descobrir curiosidades sobre a agricultura familiar.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Agricultura Familiar | Educação e Sustentabilidade</p>
-    <p>Produza, compartilhe e valorize alimentos locais!</p>
   </footer>
 
 </body>
